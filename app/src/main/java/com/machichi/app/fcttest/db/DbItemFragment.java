@@ -1,7 +1,7 @@
 package com.machichi.app.fcttest.db;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,19 +29,13 @@ import io.realm.Realm;
 import io.realm.RealmObject;
 import io.realm.RealmResults;
 
-/**
- * Created by Elias on 26/05/2015.
- */
 public class DbItemFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     public static final String TAG = DbItemFragment.class.getName();
-
+    View rootView;
     private GridView mGridView;
     private DbItemAdapter mAdapter;
-
     private Realm realm;
-
-    View rootView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,7 +62,7 @@ public class DbItemFragment extends Fragment implements AdapterView.OnItemClickL
         super.onResume();
 
         // Load from file "items.json" first time
-        if(mAdapter == null) {
+        if (mAdapter == null) {
             List<DbItem> items = loadItems();
 
             //This is the GridView adapter
@@ -76,7 +70,7 @@ public class DbItemFragment extends Fragment implements AdapterView.OnItemClickL
             mAdapter.setData(items);
 
             //This is the GridView which will display the list of items.json
-            mGridView = (GridView)rootView.findViewById(R.id.items_list);
+            mGridView = (GridView) rootView.findViewById(R.id.items_list);
             mGridView.setAdapter(mAdapter);
             mGridView.setOnItemClickListener(DbItemFragment.this);
             mAdapter.notifyDataSetChanged();
@@ -120,7 +114,8 @@ public class DbItemFragment extends Fragment implements AdapterView.OnItemClickL
                 .create();
 
         JsonElement json = new JsonParser().parse(new InputStreamReader(stream));
-        List<DbItem> items = gson.fromJson(json, new TypeToken<List<DbItem>>() {}.getType());
+        List<DbItem> items = gson.fromJson(json, new TypeToken<List<DbItem>>() {
+        }.getType());
 
         // Open a transaction to store items into the realm
         // Use copyToRealm() to convert the objects into proper RealmObjects managed by Realm.
@@ -146,7 +141,7 @@ public class DbItemFragment extends Fragment implements AdapterView.OnItemClickL
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        DbItem modifiedItem = (DbItem)mAdapter.getItem(position);
+        DbItem modifiedItem = (DbItem) mAdapter.getItem(position);
 
         // Update the realm object affected by the user
         Realm realm = Realm.getInstance(getActivity());

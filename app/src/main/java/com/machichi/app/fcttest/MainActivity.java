@@ -20,7 +20,10 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.machichi.app.fcttest.camera.CameraFragment;
+import com.machichi.app.fcttest.cheese.CheeseListFragment;
+import com.machichi.app.fcttest.db.DbItemFragment;
 import com.machichi.app.fcttest.random.RandomFragment;
+import com.machichi.app.fcttest.soundbox.SoundBoxFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         final ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.ic_menu);
@@ -88,8 +92,10 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
         adapter.addFragment(new CheeseListFragment(), "Category 1");
-        adapter.addFragment(new CheeseListFragment(), "Category 2");
-        adapter.addFragment(new CheeseListFragment(), "Category 3");
+        adapter.addFragment(new SoundBoxFragment(), "Category 2");
+        adapter.addFragment(new CameraFragment(), "Category 3");
+        adapter.addFragment(new RandomFragment(), "Category 4");
+        adapter.addFragment(new DbItemFragment(), "Category 5");
         viewPager.setAdapter(adapter);
     }
 
