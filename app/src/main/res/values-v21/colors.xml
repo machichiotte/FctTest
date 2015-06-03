@@ -13,13 +13,8 @@
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
--->
+  -->
 
 <resources>
-
-    <style name="Theme.DesignDemo" parent="Base.Theme.DesignDemo">
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
-
+    <color name="window_background">#FFF5F5F5</color>
 </resources>
