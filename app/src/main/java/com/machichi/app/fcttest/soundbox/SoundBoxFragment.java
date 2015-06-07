@@ -17,7 +17,7 @@ public class SoundBoxFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_soundbox, container, false);
+        View rootView = inflater.inflate(R.layout.soundbox_fragment, container, false);
 
 
         Button one = (Button) rootView.findViewById(R.id.button_soundbox_A);

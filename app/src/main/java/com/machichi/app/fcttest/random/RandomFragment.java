@@ -32,7 +32,7 @@ public class RandomFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_random, container, false);
+        View rootView = inflater.inflate(R.layout.random_fragment, container, false);
 
         ImageView iv = (ImageView) rootView.findViewById(R.id.iv_random);
 

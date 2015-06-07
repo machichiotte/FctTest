@@ -14,6 +14,9 @@
 
     <uses-feature android:name="android.hardware.camera" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,7 +26,7 @@
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDq30mxwRaAeHMxk5Ze7ozmrscZ1r4gVJQ"/>
 
         <!--<activity android:name=".MainActivity">-->
-        <activity android:name=".MainActivity">
+        <activity android:name=".record.AudioOnTouchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

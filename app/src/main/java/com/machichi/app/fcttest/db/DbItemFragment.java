@@ -41,9 +41,9 @@ public class DbItemFragment extends Fragment implements AdapterView.OnItemClickL
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        /*final View rootView = inflater.inflate(R.layout.fragment_db_item,
+        /*final View rootView = inflater.inflate(R.layout.db_item_fragment,
                 container, false);*/
-        rootView = inflater.inflate(R.layout.fragment_db_item,
+        rootView = inflater.inflate(R.layout.db_item_fragment,
                 container, false);
 
         // Clear the realm from last time
