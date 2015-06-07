@@ -24,6 +24,7 @@ import com.machichi.app.fcttest.cheese.CheeseListFragment;
 import com.machichi.app.fcttest.db.DbItemFragment;
 import com.machichi.app.fcttest.map.PageMapFragment;
 import com.machichi.app.fcttest.random.RandomFragment;
+import com.machichi.app.fcttest.record.AudioFragment;
 import com.machichi.app.fcttest.soundbox.SoundBoxFragment;
 
 import java.util.ArrayList;
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new RandomFragment(), "Rand");
         adapter.addFragment(new DbItemFragment(), "DB");
         adapter.addFragment(new PageMapFragment(), "map");
+        adapter.addFragment(new AudioFragment(), "audio");
         //adapter.addFragment(new ShowLocationActivity(), "Local");
         viewPager.setAdapter(adapter);
     }
