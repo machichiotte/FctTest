@@ -1,6 +1,5 @@
 package com.machichi.app.fcttest;
 
-
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -22,6 +21,7 @@ import android.view.View;
 import com.machichi.app.fcttest.camera.CameraFragment;
 import com.machichi.app.fcttest.cheese.CheeseListFragment;
 import com.machichi.app.fcttest.db.DbItemFragment;
+import com.machichi.app.fcttest.db_greendao_add_list.ProfilListActivity;
 import com.machichi.app.fcttest.map.PageMapFragment;
 import com.machichi.app.fcttest.random.RandomFragment;
 import com.machichi.app.fcttest.record.AudioFragment;
@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new DbItemFragment(), "DB");
         adapter.addFragment(new PageMapFragment(), "map");
         adapter.addFragment(new AudioFragment(), "audio");
+        adapter.addFragment(new ProfilListActivity(), "bddgreen");
         //adapter.addFragment(new ShowLocationActivity(), "Local");
         viewPager.setAdapter(adapter);
     }
