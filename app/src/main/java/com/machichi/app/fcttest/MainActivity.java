@@ -18,14 +18,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.machichi.app.fcttest.camera.CameraFragment;
+import com.machichi.app.fcttest.bluetooth.BluetoothFragment;
 import com.machichi.app.fcttest.cheese.CheeseListFragment;
-import com.machichi.app.fcttest.db.DbItemFragment;
-import com.machichi.app.fcttest.db_greendao_add_list.ProfilListActivity;
 import com.machichi.app.fcttest.db_indian_test.DbIndianMainFragment;
 import com.machichi.app.fcttest.imageLoader.ImageLoaderFragment;
-import com.machichi.app.fcttest.map.PageMapFragment;
-import com.machichi.app.fcttest.random.RandomFragment;
 import com.machichi.app.fcttest.record.AudioFragment;
 import com.machichi.app.fcttest.soundbox.SoundBoxFragment;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -111,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         //adapter.addFragment(new ProfilListActivity(), "bddgreen"); ??
         adapter.addFragment(new ImageLoaderFragment(), "imageLoader");
         adapter.addFragment(new DbIndianMainFragment(), "dbIndian");
+        adapter.addFragment(new BluetoothFragment(), "BT");
         //adapter.addFragment(new ShowLocationActivity(), "Local"); ??
         viewPager.setAdapter(adapter);
     }

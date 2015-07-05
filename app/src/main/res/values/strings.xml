@@ -44,18 +44,14 @@
     <string name="error_must_be_number">Field must be a number</string>
     <string name="error_cannot_be_empty">Field cannot be empty</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!-- bluetooth-->
-    <string name="bt_unlock_instructions">
-        Select paired devices that will disable lock screen security
-        while connected. Long-press an item to set additional options while
-        connected (if checked).
-    </string>
-    <string name="no_paired_devices"> No paired bluetooth devices</string>
-    <string name="pair">Pair</string>
-    <string name="bluetooth_disabled">Bluetooth is disabled</string>
-    <string name="enable">Enable</string>
-    <string name="no_bluetooth_adapter">This device does not support bluetooth</string>
-    <string name="disable_keyguard_bt_label">Enable management</string>
+    <!-- BT -->
+    <string name="Text">Status: -</string>
+    <string name="on">Turn On</string>
+    <string name="off">Turn Off</string>
+    <string name="List">List paired Devices</string>
+    <string name="Find">Search new Devices / Cancel</string>
 
 </resources>
