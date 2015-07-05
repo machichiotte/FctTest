@@ -24,24 +24,38 @@
     <string name="useGoogleLocationServices">Use Google\'s Location Services?</string>
     <string name="useGoogleLocationServicesPrompt">Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</string>
 
-<!--bddgreen-->
-  <string name="menu_add_item">Add item</string>
-  <string name="menu_delete_items">Delete items</string>
-  <string name="button_save">Save</string>
-  <string name="dialog_delete_items_title">Delete items</string>
-  <string name="dialog_delete_items_confirm">Yes</string>
-  <string name="dialog_delete_items_cancel">No</string>
-  <string name="dialog_delete_items_content">Do you want to delete all items from list?</string>
-  <string name="dialog_delete_item_title">Delete item</string>
-  <string name="dialog_delete_item_content">Do you want to delete this item?</string>
-  <string name="toast_no_items_to_delete">There are no items to delete</string>
-  <string name="toast_validation_error">Validation error</string>
-  <string name="tv_label_item_id">Item id: </string>
-  <string name="tv_label_profil_nickname">Box name: </string>
-  <string name="tv_label_profil_num">Box num: </string>
-  <string name="tv_label_profil_mail">Box mail: </string>
-  <string name="tv_label_profil_password">Box password: </string>
-  <string name="error_must_be_number">Field must be a number</string>
-  <string name="error_cannot_be_empty">Field cannot be empty</string>
+    <!--bddgreen-->
+    <string name="menu_add_item">Add item</string>
+    <string name="menu_delete_items">Delete items</string>
+    <string name="button_save">Save</string>
+    <string name="dialog_delete_items_title">Delete items</string>
+    <string name="dialog_delete_items_confirm">Yes</string>
+    <string name="dialog_delete_items_cancel">No</string>
+    <string name="dialog_delete_items_content">Do you want to delete all items from list?</string>
+    <string name="dialog_delete_item_title">Delete item</string>
+    <string name="dialog_delete_item_content">Do you want to delete this item?</string>
+    <string name="toast_no_items_to_delete">There are no items to delete</string>
+    <string name="toast_validation_error">Validation error</string>
+    <string name="tv_label_item_id">Item id: </string>
+    <string name="tv_label_profil_nickname">Box name: </string>
+    <string name="tv_label_profil_num">Box num: </string>
+    <string name="tv_label_profil_mail">Box mail: </string>
+    <string name="tv_label_profil_password">Box password: </string>
+    <string name="error_must_be_number">Field must be a number</string>
+    <string name="error_cannot_be_empty">Field cannot be empty</string>
+
+
+    <!-- bluetooth-->
+    <string name="bt_unlock_instructions">
+        Select paired devices that will disable lock screen security
+        while connected. Long-press an item to set additional options while
+        connected (if checked).
+    </string>
+    <string name="no_paired_devices"> No paired bluetooth devices</string>
+    <string name="pair">Pair</string>
+    <string name="bluetooth_disabled">Bluetooth is disabled</string>
+    <string name="enable">Enable</string>
+    <string name="no_bluetooth_adapter">This device does not support bluetooth</string>
+    <string name="disable_keyguard_bt_label">Enable management</string>
 
 </resources>

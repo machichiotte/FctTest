@@ -77,7 +77,7 @@ public class ProfilListActivity extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        boxAdapter.updateData(ProfilRepository.getAllProf(getActivity()));
+        boxAdapter.updateData(ProfilRepository.getAllProf(getActivity().getApplicationContext()));
     }
 
     @Override

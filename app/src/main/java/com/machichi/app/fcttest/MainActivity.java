@@ -22,10 +22,14 @@ import com.machichi.app.fcttest.camera.CameraFragment;
 import com.machichi.app.fcttest.cheese.CheeseListFragment;
 import com.machichi.app.fcttest.db.DbItemFragment;
 import com.machichi.app.fcttest.db_greendao_add_list.ProfilListActivity;
+import com.machichi.app.fcttest.db_indian_test.DbIndianMainFragment;
+import com.machichi.app.fcttest.imageLoader.ImageLoaderFragment;
 import com.machichi.app.fcttest.map.PageMapFragment;
 import com.machichi.app.fcttest.random.RandomFragment;
 import com.machichi.app.fcttest.record.AudioFragment;
 import com.machichi.app.fcttest.soundbox.SoundBoxFragment;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Add in activity if imageLoader needed in fragment
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
+        ImageLoader.getInstance().init(config);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -95,13 +103,15 @@ public class MainActivity extends AppCompatActivity {
         Adapter adapter = new Adapter(getSupportFragmentManager());
         adapter.addFragment(new CheeseListFragment(), "List");
         adapter.addFragment(new SoundBoxFragment(), "Sound");
-        adapter.addFragment(new CameraFragment(), "Cam");
-        adapter.addFragment(new RandomFragment(), "Rand");
-        adapter.addFragment(new DbItemFragment(), "DB");
-        adapter.addFragment(new PageMapFragment(), "map");
+        //adapter.addFragment(new CameraFragment(), "Cam");
+        //adapter.addFragment(new RandomFragment(), "Rand");
+        //adapter.addFragment(new DbItemFragment(), "DB");
+        //adapter.addFragment(new PageMapFragment(), "map");
         adapter.addFragment(new AudioFragment(), "audio");
-        adapter.addFragment(new ProfilListActivity(), "bddgreen");
-        //adapter.addFragment(new ShowLocationActivity(), "Local");
+        //adapter.addFragment(new ProfilListActivity(), "bddgreen"); ??
+        adapter.addFragment(new ImageLoaderFragment(), "imageLoader");
+        adapter.addFragment(new DbIndianMainFragment(), "dbIndian");
+        //adapter.addFragment(new ShowLocationActivity(), "Local"); ??
         viewPager.setAdapter(adapter);
     }
 
